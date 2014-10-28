@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!--FAMC, HEAD, TRLR-->
+<arbre>
+	<individu id_ind="id-I23"> <!--INDI @I23@ -->
+		<name>James /Begood/</name> <!--NAME-->
+		<sexe>feminin</sexe> <!--SEX-->
+		<bapteme>Bond</bapteme> <!--CHR-->
+		<naissance>17/04/1989</naissance> <!--BIRT-->
+		<enterement> ??? </enterement> <!--BURI-->
+		<décés>17/04/2080</décés> <!--DEAT-->
+		<objet> <!--OBJ-->
+			<form> ??? </form> <!--FORM-->
+			<title> ??? </title> <!--TITL-->
+			<file> ??? </file> <!--FILE-->
+		</objet>
+	</individu>
+	
+	<famille id_fam="id-F28"> <!--FAM @F28@-->
+		<mariage></mariage> <!--MARR-->
+		<divorce> <!--DIV-->
+			<date></date> <!--DATE-->
+			<place></place> <!--PLAC-->
+			<source>URL</source> <!--SOUR-->
+			<note>blabla</note> <!--NOTE-->
+		</divorce>
+		<père id_ind_ref="id-I23"></père> <!--HUSB-->
+		<mère id_ind_ref="id-I24"></mère> <!--WIFE-->
+		<child id_ind_ref="id-I25"></child> <!--CHIL-->
+		<child id_ind_ref="id-I26"></child>
+	</famille>
+</arbre>

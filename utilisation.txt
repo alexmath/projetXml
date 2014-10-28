@@ -1,0 +1,7 @@
+git branch nomBranch
+git checkout nomBranch
+après tu fais toutes t'es manip
+git checkout master ( branch principale) 
+git merge nomBranchAFusionne ( tu fusionne ta branche de travail avec la principale)
+
+

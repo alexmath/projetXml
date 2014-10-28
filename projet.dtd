@@ -1,0 +1,32 @@
+<!ELEMENT arbre (individu|famille)*>
+<!ELEMENT individu (name?, sexe?, objet?, bapteme?, naissance?, sepulture?, décés?)>
+<!ATTLIST individu id_indi (@I*@) #REQUIRED>
+	
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT sexe (#PCDATA)>
+<!ELEMENT bapteme (date?, place?, source?, note?)> <!--evenement-->
+<!ELEMENT naissance (date?, place?, source?, note?)> <!--evenement-->
+<!ELEMENT sépulture (date?, place?, source?, note?)> <!--evenement-->
+<!ELEMENT décés (date?, place?, source?, note?)> <!--evenement-->
+
+<!ELEMENT objet (form,title,file)>
+<!ELEMENT form (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT file (#PCDATA)>
+<!ATTLIST file id_file (@S*@) #REQUIRED>
+<!ELEMENT famille (individu|famille)*>
+<!ATTLIST famille id_fam (@F*@) #REQUIRED>
+<!ELEMENT marriage (date?, place?, source?, note?)> <!--evenement-->
+<!ELEMENT divorce (date?, place?, source?, note?)> <!--evenement-->
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT source (#PCDATA)>
+<!ATTLIST source id_ind (@S*@) #REQUIRED>
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note id_ind (@N*@) #REQUIRED>
+<!--<!ELEMENT père ()>
+<!ELEMENT mère ()>
+<!ELEMENT child ()>
+-->
+
+<!--comment representer une famille sur plusieurs generations? ( père/mère? fils ?) -->

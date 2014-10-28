@@ -1,0 +1,46 @@
+<xsd:complexType name="famille" maxOccurs="unbounded">
+	<xsd:all>
+		<xsd:element name="family_event" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="famille" minOccurs="0"/> 
+	</xsd:all>
+	<xsd:attribute name="id_fam" type="xsd:id" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="Evenement">
+	<xsd:all>
+		<xsd:element name="date" type="xsd:date" minOccurs="0"/>
+		<xsd:element name="place" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="source" type="xsd:URL" minOccurs="0"/>
+		<xsd:element name="note" type="xsd:string" minOccurs="0"/>
+	</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="mariage" type="Evenement"/>
+<xsd:complexType name="naissance" type="Evenement"/>
+<xsd:complexType name="bapteme" type="Evenement"/>
+<xsd:complexType name="décés" type="Evenement"/>
+<xsd:complexType name="enterement" type="Evenement"/>
+<xsd:complexType name="divorce" type="Evenement"/>
+
+
+<xsd:complexType name="individu">
+	<xsd:all>
+		<xsd:element name="name" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="sexe" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="bapteme"/>
+		<xsd:element name="naissance"/>
+		<xsd:element name="décés"/>
+		<xsd:element name="enterement"/>
+		<xsd:element name="objet"/>
+	</xsd:all>
+	<xsd:attribute name="id_ind" type="xsd:id" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="objet" minOccurs="0" maxOccurs="unbounded">
+	<xsd:all>
+		<xsd:element name="format" type="xsd:format" minOccurs="0"/>
+		<xsd:element name="title" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="file" type="xsd:file" minOccurs="0"/>
+	</xsd:all>
+</xsd:complexType>
+
